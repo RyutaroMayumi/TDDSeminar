@@ -34,7 +34,7 @@
                 ```
             3. 以下のコマンドでインストーラーパッケージをダウンロードする
                 ```
-                > Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
+                > Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
                 ```
             4. 以下のコマンドで Ubuntu をインストールする
                 ```
