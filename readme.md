@@ -77,7 +77,9 @@
     - 他に使いたいドライブ（例：Dドライブ）がある場合は、ドライブのマウント設定を行います
         1. ドライブのマウントポイントを作成
             ```
-            $ mkdir /mnt/d
+            $ sudo mkdir /mnt/d
+            $ sudo chown usrname /mnt/d
+            $ sudo chgrp grpname /mnt/d
             ```
         2. 設定ファイルを開く
             ```
