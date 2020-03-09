@@ -27,7 +27,7 @@
             1. Windows PowerShell を管理者権限で起動する
             2. 以下の操作でプロキシサーバーの登録と認証を行う
                 ```
-                > netsh winhttp set proxy proxy-server="10.1.8.72:8080"
+                > netsh winhttp set proxy proxy-server="address:port"
                 > $Wcl=New-Object System.Net.WebClient
                 > $Creds=Get-Credential
                 > $Wcl.Proxy.Credentials=$Creds
