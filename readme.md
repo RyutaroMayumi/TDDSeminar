@@ -72,6 +72,16 @@
     $ make
     $ sudo make install
     ```
+    - Ubuntu 16.04 を使用する場合は以下の変更が必要
+    - googletest/CMakeList.txt を開く
+        - 5行目に以下を追記
+            ```
+            5 set(CMAKE_CXX_STANDARD 11)
+            ```
+        - 13行目を以下のように変更
+            ```
+            if (CMAKE_VERSION VERSION_GREATER "3.1")
+            ```
 6. ドライブのマウント設定（必要あれば）
     - Ubuntu をインストールしたドライブ以外は、通常 Ubuntu から見えません
     - 他に使いたいドライブ（例：Dドライブ）がある場合は、ドライブのマウント設定を行います
