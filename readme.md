@@ -70,7 +70,7 @@
     $ cd build
     $ cmake ..
     $ make
-    $ make install
+    $ sudo make install
     ```
 6. ドライブのマウント設定（必要あれば）
     - Ubuntu をインストールしたドライブ以外は、通常 Ubuntu から見えません
