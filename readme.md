@@ -76,7 +76,7 @@
     - googletest/CMakeList.txt を開く
         - 5行目に以下を追記
             ```
-            5 set(CMAKE_CXX_STANDARD 11)
+            set(CMAKE_CXX_STANDARD 11)
             ```
         - 13行目を以下のように変更
             ```
