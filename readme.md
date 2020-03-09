@@ -78,8 +78,8 @@
         1. ドライブのマウントポイントを作成
             ```
             $ sudo mkdir /mnt/d
-            $ sudo chown usrname /mnt/d
-            $ sudo chgrp grpname /mnt/d
+            $ sudo chown username /mnt/d
+            $ sudo chgrp username /mnt/d
             ```
         2. 設定ファイルを開く
             ```
