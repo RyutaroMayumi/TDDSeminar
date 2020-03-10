@@ -14,10 +14,11 @@
     - Extensions
         - Remote - WSL
         - C/C++ (in WSL)
-        - C++ Intellisense in (WSL)
+        - C++ Intellisense (in WSL)
         - CMake (in WSL)
         - GoogleTest Adapter (in WSL)
 - テストフレームワーク：Google Test
+※各言語関連のツールのシェアを見るのは以下が分かりやすい　⇒　[JET BRAINS](https://www.jetbrains.com/ja-jp/lp/devecosystem-2019/c/)
 ## 環境構築
 ### OS のインストール
 - [Windows Subsystem for LinuxでUbuntu](https://qiita.com/serlys/items/30f1b43deba257033342)などを参照
