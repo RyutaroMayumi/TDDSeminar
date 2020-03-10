@@ -8,7 +8,7 @@
 ## 開発環境
 - OS：Ubuntu 16.04 or 18.04 on WSL (Windows10)
 - コンパイラ：gcc/g++
-- ビルドシステム：make + cmake
+- ビルドツール：make + cmake
 - デバッガ：gdb
 - エディタ：Visual Studio Code
     - Extensions
@@ -43,29 +43,39 @@
     3. Ubuntu コンソールを起動する
         - 起動後、ユーザー名とパスワードの設定を求められるので、自由に設定する
 ### Ubuntu 側の準備
-1. Ubuntu コンソール上で、以下の操作で Ubuntu をアップグレードする
+1. apt コマンドのプロキシ設定を行う
+    ```
+    sudo vi /etc/apt/apt.conf
+    ```
+    で設定ファイルを開き、以下を追記
+    ```
+    Acquire::http::proxy "http://user:pass@addr:port/";
+    Acquire::https::proxy "https://user:pass@addr:port/";
+    Acquire::ftp::proxy "ftp://user:pass@addr:port/";
+    ```
+2. Ubuntu コンソール上で、以下の操作で Ubuntu をアップグレードする
     ```
     $ sudo apt update
     $ sudo apt upgrade
     ```
-2. C/C++ 開発環境をインストールする
+3. C/C++ 開発環境をインストールする
     ```
     $ sudo apt install build-essential
     ```
-3. cmake をインストールする
+4. cmake をインストールする
     ```
     $ sudo apt install cmake
     ```
-4. gdb をインストールする
+5. gdb をインストールする
     ```
     $ sudo apt install gdb
     ```
-5. Google Test をインストールする
+6. Google Test をインストールする
     ```
     $ mkdir Download
     $ cd Download
     $ git clone https://github.com/google/googletest.git
-    $ cd GoogleTest
+    $ cd googleTest
     $ mkdir build
     $ cd build
     $ cmake ..
@@ -82,7 +92,7 @@
             ```
             if (CMAKE_VERSION VERSION_GREATER "3.1")
             ```
-6. ドライブのマウント設定（必要あれば）
+7. ドライブのマウント設定（必要あれば）
     - Ubuntu をインストールしたドライブ以外は、通常 Ubuntu から見えません
     - 他に使いたいドライブ（例：Dドライブ）がある場合は、ドライブのマウント設定を行います
         1. ドライブのマウントポイントを作成
@@ -97,10 +107,10 @@
             ```
         3. 以下のように追記する
             ```
-            D:  /mnt/d  drvfs   default,uid=1000,gid=1000   0   0
+            D:  /mnt/d  drvfs   default,metadata,uid=1000,gid=1000,umask=022   0   0
             ```
         4. Windows を再起動する
-7. Windows ファイルシステムへのシンボリックリンク作成（必要あれば）
+8. Windows ファイルシステムへのシンボリックリンク作成（必要あれば）
     - Ubuntu のユーザーディレクトリは、Windows システムのアプリケーションフォルダの深いところにありアクセスしにくいです
     - そのため、ユーザーディレクトリに、普段使っている作業フォルダのシンボリックリンクを作成することをおすすめします
     - Ubuntu のユーザーディレクトリで、以下のコマンドを実行します
